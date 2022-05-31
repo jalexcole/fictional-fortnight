@@ -1,0 +1,10 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/workspace/fictional-fortnight'
+echo -en "\e[0;33mCC \e[0m";
+g++ -c src/main.cpp -o lib/main.o -g3 -DDEBUG=1 -Og -std=c++11  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic  
+echo -en "\e[0;33mLD \e[0m";
+g++ -o bin/C-Cpp-Make lib/chunk.o lib/memory.o lib/main.o -g3 -DDEBUG=1 -Og -std=c++11  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic  
+echo -en "\n--\nBinary file placed at" \
+		  "\e[0;33mbin/C-Cpp-Make\e[0m\n";
+make: Leaving directory '/workspace/fictional-fortnight'
+ 

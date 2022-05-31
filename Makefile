@@ -48,7 +48,7 @@ SRCEXT := cpp
 
 
 # Defines the C Compiler
-CC := clang++
+CC := g++
 
 
 # Defines the language standards for GCC
