@@ -5,12 +5,12 @@
 #include "value.h"
 #include <cstdint>
 
-typedef enum OpCode {
+typedef enum OpCode : uint8_t {
     OP_CONSTANT,
     OP_RETURN,
 } OpCode;
 
-struct Chunk{
+struct Chunk {
     int count;
     int capacity;
     uint8_t* code;
@@ -19,7 +19,7 @@ struct Chunk{
 };
 
 void initChunk(Chunk* chunk);
-void writeChunk(Chunk* chunk, uint8_t byte);
+void writeChunk(Chunk* chunk, uint8_t byte, int line);
 void freeChunk(Chunk* chunk);
 int addConstant(Chunk* chunk, Value value);
 
